@@ -1,15 +1,16 @@
 import urllib.request
 import urllib.parse
-useragent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+useragent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'
 header= {
     'User-Agent':useragent,
-    'Referer':'http://manhua.dmzj.com/xingyunxing/19048.shtml'
+    'Referer':'http://manhua.dmzj.com/nietaxianjing/34281.shtml'
 }
-for i in range(0,75):
-    if i in range(0,10):
-        website = 'http://images.dmzj.com/x/%E5%B9%B8%E8%BF%90%E6%98%9F/%E7%AC%AC09%E5%8D%B7/00'+str(i)+'.jpg'
+yeshu = input("yeshu:\n")
+for i in range(1,int(yeshu)+1):
+    if i in range(1,10):
+        website= 'http://images.dmzj.com/n/%E6%8D%8F%E9%80%A0%E9%99%B7%E9%98%B1/%E7%AC%AC03%E8%AF%9D_1426930575/0'+str(i)+'.jpg'
     else:
-         website = 'http://images.dmzj.com/x/%E5%B9%B8%E8%BF%90%E6%98%9F/%E7%AC%AC09%E5%8D%B7/0'+str(i)+'.jpg'
+        website= 'http://images.dmzj.com/n/%E6%8D%8F%E9%80%A0%E9%99%B7%E9%98%B1/%E7%AC%AC03%E8%AF%9D_1426930575/'+str(i)+'.jpg'
     req=urllib.request.Request(url=website,data=None,headers=header)
     response=urllib.request.urlopen(req).read()
     if i in range(0,10):
